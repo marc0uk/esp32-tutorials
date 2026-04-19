@@ -1,0 +1,27 @@
+#include <Arduino.h>
+#include "lesson04.h"
+
+uint32_t Freq = 0;
+
+void setup_lesson04() {
+    pinMode(GPIO_pin, OUTPUT); 
+    Serial.begin(115200);
+    setCpuFrequencyMhz(10);
+    Freq = getCpuFrequencyMhz();
+    Serial.print("CPU Freq = ");
+    Serial.print(Freq);
+    Serial.println(" MHz");
+    Freq = getXtalFrequencyMhz();
+    Serial.print("XTAL Freq = ");
+    Serial.print(Freq);
+    Serial.println(" MHz");
+    Freq = getApbFrequency();
+    Serial.print("APB Freq = ");
+    Serial.print(Freq);
+    Serial.println(" Hz");
+}
+
+void loop_lesson04() {
+    digitalWrite(GPIO_pin, 1);
+    digitalWrite(GPIO_pin, 0);
+}

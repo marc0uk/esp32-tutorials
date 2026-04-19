@@ -1,0 +1,19 @@
+# PlatformIO generated folders
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# VS Code folders
+.vscode/
+!.vscode/extensions.json
+
+# Standard build artifacts
+*.pyc
+*.o
+*.elf
+*.bin
+
+# Local environment files
+.DS_Store
+Thumbs.db
+
