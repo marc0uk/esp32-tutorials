@@ -5,4 +5,7 @@
 void setup_lesson07();
 void loop_lesson07();
 
+void setup_lesson07_scrolling();
+void loop_lesson07_scrolling();
+
 #endif
