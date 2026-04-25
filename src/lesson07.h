@@ -3,9 +3,10 @@
 #include<LiquidCrystal.h>
 
 void setup_lesson07();
-void loop_lesson07();
 
 void setup_lesson07_scrolling();
 void loop_lesson07_scrolling();
+
+void setup_lesson07_custom_char();
 
 #endif

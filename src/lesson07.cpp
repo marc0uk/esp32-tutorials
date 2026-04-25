@@ -32,10 +32,6 @@ void setup_lesson07() {
     Serial.println("END!");
 }
 
-void loop_lesson07() {
-
-}
-
 void setup_lesson07_scrolling() {
     Serial.begin(115200);
     delay(200);
@@ -68,4 +64,34 @@ void loop_lesson07_scrolling() {
         My_LCD.scrollDisplayLeft();
         delay(500);
     }
+}
+
+byte SpeakerChar[] = {
+    B00001,
+    B00011,
+    B00111,
+    B11111,
+    B11111,
+    B00111,
+    B00011,
+    B00001
+};
+
+void setup_lesson07_custom_char() {
+    Serial.begin(115200);
+    delay(200);
+    Serial.println("Initialising LCD - lesson07 custom character");
+
+    // Initialise the LCD. Parameter: [ columns, rows ]
+    My_LCD.begin(16, 2);
+    // Create a Custom Character (Speaker)
+    My_LCD.createChar(0, SpeakerChar);
+    // Clears the LCD display
+    My_LCD.clear();
+
+    // Display The First Message In Home Position (0, 0) 
+    My_LCD.print("Speaker Char "); 
+    // Append The New Char To The Message
+    // Note That: byte(0) Now Represents Our 1st New Custom Char
+    My_LCD.write(byte(0));    
 }
