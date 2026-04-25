@@ -1,6 +1,11 @@
 #include<Arduino.h>
 #include "lesson07.h"
 
+/*
+ * Note that the wiring diagram on the lesson website is wrong. The data wires
+ * are plugged backwards: the code is matching the wiring listed in the table!
+ */
+
 // Create An LCD Object. Signals: [ RS, EN, D4, D5, D6, D7 ] 
 LiquidCrystal My_LCD(13, 12, 14, 27, 26, 25);
 
